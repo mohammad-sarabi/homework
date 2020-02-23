@@ -1,0 +1,76 @@
+
+1-
+let temperature=prompt("givr me your temperature","");
+let result=(temperature*1.8)+32;
+console.log(result,"Fahrenheit");
+
+2-
+let inch=prompt(":","");
+let meter= inch/39.37007874;
+console.log(meter.toFixed(2))
+
+3-
+function mili(miliSecond){
+let day=miliSecond/864e5;// 864e5 is day*hour*minute*second*miliSecond
+    let dey_leftOver=day%Math.trunc(day);
+let hour =dey_leftOver*24;
+    let hour_leftOver=hour%Math.trunc(hour);
+let minute=hour_leftOver*60;
+    let minute_leftOver=minute%Math.trunc(minute);
+let second=minute_leftOver*60;
+    let second_leftOver=second%Math.trunc(second);
+ let mili_Second=second_leftOver*1000;
+    let mili_Second_leftOver=mili_Second%Math.trunc(mili_Second);
+console.log(Math.trunc(day),"day",Math.trunc(hour),"hour",Math.trunc(minute),"minute",Math.trunc(second),"second",Math.trunc(mili_Second),"miliSecond")
+}
+
+4-
+function BMI(weight,height){
+    console.log((weight/height**2)*10000)  
+}
+
+5-
+function sortNumber(a, b) {
+  return a - b;
+}
+let numArray = [];
+  numArray.sort(sortNumber);
+  console.log(numArray);
+
+6-
+  let array = [1, 2, 3, 4, 5];
+    
+  
+    let sum = array.reduce(function(a, b){
+        return a + b;
+    }, 0);
+    
+    console.log(sum);
+
+7-
+function stars() {
+    let number = +prompt(":","");
+    
+    let risult = "";
+    for (let i = 1; i <= number; i++) {
+      for (let j = 1; j <= number - i; j++) {
+        risult += " ";
+      }
+      for (let t = 1; t<= 2 * i - 1; t++) {
+        risult += "*";
+      }
+      risult += '\n';
+    }
+    Counst = number;
+    for (let j = 1; j < Counst; j++) {
+      for (let i = 1; i <= j; i++) {
+        risult += " ";
+      }
+      number -= 1;
+      for (let k = 1; k <= 2 * number - 1; k++) {
+        risult += "*";
+      }
+      risult += '\n';
+    }
+    console.log(risult);
+  }
